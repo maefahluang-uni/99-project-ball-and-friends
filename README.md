@@ -1,15 +1,75 @@
-# Project -title
-explain your project here
-## Members
-list out your member ID and name.
-6431503013 Chidchanok Wongkodchasuk
-6431503031 Thammanit Rinthang
-6431503034 Benjamart Noiwiset
-6431503053 Wannaporn Somsri
+# Nuxt 3 Minimal Starter
 
-## Instruction
-You need to create skeleton of your project's development. It does not necessary include the complete source code. Please follow instructions below:
-- Edit readme file that briefly explains your project and details of members.​ 
-- Create folder structure and some source code to prepare for development
-- Decide what features to roll out and who is responsible for it.​ Create branches for each feature. Explain each feature in Readme file in their own branch​ 
-- Create Docker file for your deployment of your application 
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
