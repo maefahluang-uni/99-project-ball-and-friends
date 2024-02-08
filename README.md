@@ -23,5 +23,5 @@ list out your member ID and name.
 6431503053 Wannaporn Somsri
 
 ## Instruction
-View the various menus of the system and view the status of each debtor.
+The Expected Lost Debtors page features a default table and is searchable and filterable. They can also be added, deleted and edited.
 
