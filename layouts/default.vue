@@ -19,7 +19,7 @@
                         <NuxtLink to="/track/letter2">ลูกหนี้งวดที่ 2</NuxtLink>
                     </a>
                     <a>
-                        <NuxtLink to="/">ลูกหนี้ NPL</NuxtLink>
+                        <NuxtLink to="/track/wannaporn">ลูกหนี้ NPL</NuxtLink>
                     </a>
                     <a>
                         <NuxtLink to="/">ลูกหนี้คาดว่าจะสูญหาย</NuxtLink>
