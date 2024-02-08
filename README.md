@@ -25,7 +25,10 @@ list out your member ID and name.
 
 ## Feature benjamart
 This feature is used to display information about the debtor's data for the 2nd installment.
-=======
+
 ## Feature thammanit
 The Expected Lost Debtors page features a default table and is searchable and filterable. They can also be added, deleted and edited.
+
+# Feature Wannaporn
+This feature is used to display information about the debtor's data for the 1st installment and can search the names of debtors.
 
