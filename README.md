@@ -21,9 +21,9 @@ Debt Management System
 
 ### Feature Benjamart
 This feature is used to display information about the debtor's data for the 2nd installment.
-# Feature Thammanit
+### Feature Thammanit
 The Expected Lost Debtors page features a default table and is searchable and filterable. They can also be added, deleted and edited.
-# Feature Wannaporn
+### Feature Wannaporn
 This feature is used to display information about the debtor's data for the 1st installment and can search the names of debtors.
-# Feature Chidchanok
+### Feature Chidchanok
 View the various menus of the system and view the status of each debtor.
