@@ -17,4 +17,4 @@ Wannaporn 6431503053
 
 ## Features Chidchanok
 
-Convert document files to PDF : Can select each person's list to select the desired document type and edit the details within and convert the file for download.
+View the various menus of the system and view the status of each debtor.
