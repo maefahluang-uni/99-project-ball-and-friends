@@ -1,6 +1,6 @@
 <template>
   <div>
-<Descript/>
+<Chidchanok/>
   </div>
 </template>
 
