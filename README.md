@@ -23,4 +23,5 @@ list out your member ID and name.
 6431503053 Wannaporn Somsri
 
 ## Instruction
-You need to create skeleton of your project's development. It does not necessary include the complete source code. Please follow instructions below:
+View the various menus of the system and view the status of each debtor.
+
