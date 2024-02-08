@@ -19,7 +19,7 @@ Debt Management System
 6431503053 Wannaporn Somsri
 ```
 
-# Feature Benjamart
+### Feature Benjamart
 This feature is used to display information about the debtor's data for the 2nd installment.
 # Feature Thammanit
 The Expected Lost Debtors page features a default table and is searchable and filterable. They can also be added, deleted and edited.
