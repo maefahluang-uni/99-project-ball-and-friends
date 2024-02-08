@@ -13,16 +13,16 @@
                         </a>
                     </UDropdown>
                     <a>
-                        <NuxtLink to="/track/letter">ลูกหนี้งวดที่ 1</NuxtLink>
+                        <NuxtLink to="/">ลูกหนี้งวดที่ 1</NuxtLink>
                     </a>
                     <a>
-                        <NuxtLink to="/track/letter2">ลูกหนี้งวดที่ 2</NuxtLink>
+                        <NuxtLink to="/">ลูกหนี้งวดที่ 2</NuxtLink>
                     </a>
                     <a>
                         <NuxtLink to="/">ลูกหนี้ NPL</NuxtLink>
                     </a>
                     <a>
-                        <NuxtLink to="/">ลูกหนี้คาดว่าจะสูญหาย</NuxtLink>
+                        <NuxtLink to="/track/lost">ลูกหนี้คาดว่าจะสูญหาย</NuxtLink>
                     </a>
                     <a>
                         <NuxtLink to="/">ลูกหนี้สูญหาย</NuxtLink>
