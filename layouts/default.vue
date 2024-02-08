@@ -13,7 +13,10 @@
                         </a>
                     </UDropdown>
                     <a>
-                        <NuxtLink to="/">ลูกหนี้งวดที่ 1</NuxtLink>
+
+
+                        <NuxtLink to="/track/1st_installment">ลูกหนี้งวดที่ 1</NuxtLink>
+
                     </a>
                     <a>
                         <NuxtLink to="/">ลูกหนี้งวดที่ 2</NuxtLink>
