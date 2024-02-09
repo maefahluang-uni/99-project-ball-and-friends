@@ -1,22 +1,22 @@
-# Use Node.js as base image
-FROM node:14
+# Use node as base image
+FROM node:14-alpine
 
 # Set working directory inside the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json and package-lock.json (if exists) to the container
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the application code to the container
+# Copy the rest of the application
 COPY . .
 
-# Build the Nuxt.js application
+# Build Nuxt.js application
 RUN npm run build
 
-# Expose the port the app runs on
+# Expose the port Nuxt.js is running on
 EXPOSE 3000
 
 # Command to run the application
