@@ -1,6 +1,9 @@
-FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
+FROM node:alpine
+
+WORKDIR /app
 COPY ./package.json .
+RUN npm install
+COPY . .
 EXPOSE 3000
 ENTRYPOINT ["npm"]
-CMD ["npm", "start"]
+CMD ["run", "start"]
