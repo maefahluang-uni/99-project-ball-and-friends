@@ -1,5 +1,6 @@
-FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
-COPY target/*.jar app.jar
+FROM node:alpine
+WORKDIR /app
+COPY ./package.json .
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["npm"]
+CMD ["run", "start"]
