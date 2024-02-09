@@ -1,37 +1,28 @@
-# Author : Vongkeo KSV
+FROM node:11.13.0-alpine
 
-# Pull the base image 
-FROM node:18.3.0-alpine3.14 as build-stage
+# create destination directory
+RUN mkdir -p /usr/src/nuxt-app
+WORKDIR /usr/src/nuxt-app
 
-# set working directory
-WORKDIR /app
+# update and install dependency
+RUN apk update && apk upgrade
+RUN apk add git
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# copy the app, note .dockerignore
+COPY . /usr/src/nuxt-app/
+RUN npm install
 
-# Install dependencies
-RUN yarn install
+# build necessary, even if no static files are needed,
+# since it builds the server as well
+RUN npm run build
 
-# Copy all files
-COPY . .
+# expose 5000 on container
+EXPOSE 5000
 
-# Build app
-RUN yarn build && yarn generate
+# set app serving to permissive / assigned
+ENV NUXT_HOST=0.0.0.0
+# set app port
+ENV NUXT_PORT=5000
 
-# nginx state for serving content
-FROM nginx:1.21.1-alpine as production-stage
-
-# remove the default nginx.conf
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy nginx configuration
-COPY ./nginx/default.conf /etc/nginx/conf.d
-
-# Copy static files from build-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# start nginx in the foreground
-CMD ["nginx", "-g", "daemon off;"]
+# start the app
+CMD [ "npm", "start" ]
