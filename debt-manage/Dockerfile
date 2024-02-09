@@ -1,22 +1,23 @@
-# Dockerfile
-FROM node:11.13.0-alpine
+# Use Node.js as base image
+FROM node:14
 
-# create destination directory
-RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/nuxt-app
+# Set working directory inside the container
+WORKDIR /usr/src/app
 
-# update and install dependency
-RUN apk update && apk upgrade
-RUN apk add git
+# Copy package.json and package-lock.json (if exists) to the container
+COPY package*.json ./
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Build the Nuxt.js application
 RUN npm run build
 
+# Expose the port the app runs on
 EXPOSE 3000
 
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
-
-CMD [ "npm", "start" ]
+# Command to run the application
+CMD ["npm", "start"]
