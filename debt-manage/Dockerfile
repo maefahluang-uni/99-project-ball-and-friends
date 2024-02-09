@@ -1,14 +1,22 @@
-FROM node:13.6-alpine
+# Dockerfile
+FROM node:11.13.0-alpine
 
-ARG BUILD_ENV
+# create destination directory
+RUN mkdir -p /usr/src/nuxt-app
+WORKDIR /usr/src/nuxt-app
 
-RUN mkdir -p /usr/src/app
-COPY package*.json /usr/src/app/
-RUN cd /usr/src/app/; npm install
-WORKDIR /usr/src/app
-COPY . /usr/src/app
+# update and install dependency
+RUN apk update && apk upgrade
+RUN apk add git
 
+# copy the app, note .dockerignore
+COPY . /usr/src/nuxt-app/
+RUN npm install
 RUN npm run build
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
 
+EXPOSE 3000
+
+ENV NUXT_HOST=0.0.0.0
+ENV NUXT_PORT=3000
+
+CMD [ "npm", "start" ]
