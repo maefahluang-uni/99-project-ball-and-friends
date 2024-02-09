@@ -1,31 +1,14 @@
-FROM node:lts as builder
+FROM node:13.6-alpine
 
-WORKDIR /app
+ARG BUILD_ENV
 
-COPY . .
+RUN mkdir -p /usr/src/app
+COPY package*.json /usr/src/app/
+RUN cd /usr/src/app/; npm install
+WORKDIR /usr/src/app
+COPY . /usr/src/app
 
-RUN npm install \
-  --prefer-offline \
-  --frozen-lockfile \
-  --non-interactive \
-  --production=false
-
-RUN npm build
-
-RUN rm -rf node_modules && \
-  NODE_ENV=production npm install \
-  --prefer-offline \
-  --pure-lockfile \
-  --non-interactive \
-  --production=true
-
-FROM node:lts
-
-WORKDIR /app
-
-COPY --from=builder /app  .
-
-ENV HOST 0.0.0.0
+RUN npm run build
 EXPOSE 3000
+CMD [ "npm", "run", "start" ]
 
-CMD [ "npm", "start" ]
