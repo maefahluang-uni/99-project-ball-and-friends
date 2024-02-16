@@ -1,5 +1,5 @@
 # Debt Management System 
-https://debt-manage-7jycezqkfa-uc.a.run.app/track/1st_installment
+https://debt-manage-7jycezqkfa-uc.a.run.app/
 
 - To create a website that reduces the complexity of work:  Collecting data of debtors such as debtor's name, car, location, image, and status.
 
