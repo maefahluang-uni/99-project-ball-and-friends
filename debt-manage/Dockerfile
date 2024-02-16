@@ -1,5 +1,5 @@
 # Use node as base image
-FROM node:12-alpine
+FROM node:18-alpine
 
 # Set working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port Nuxt.js is running on
-EXPOSE 3001
+EXPOSE 3000
 
 # Command to run the application
-CMD ["npm", "run", "start"]
+CMD ["npm","run","start"]
